@@ -73,12 +73,12 @@ if not csv_data.empty:
 
     totals = csv_data.groupby("Category")["Value"].sum().reset_index()
 
-    # STATIC BAR CHART
+
     st.header("Total Listening Hours by Genre")
 
     st.bar_chart(totals, x="Category", y="Value")
 
-    # DYNAMIC PIE CHART
+
     st.header("Listening Hours Distribution")
 
     if "min_hours" not in st.session_state:
